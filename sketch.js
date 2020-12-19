@@ -35,7 +35,9 @@ function setup() {
 	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:true});
 	World.add(world, packageBody);
 	
-
+var packageSprite_options={
+	restitution=1
+}
 	//Create a Ground
 	ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
  	World.add(world, ground);
