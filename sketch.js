@@ -51,6 +51,11 @@ var packageSprite_options={
 function draw() {
   rectMode(CENTER);
   background(0);
+	Engine.update(engine)
+	box1.display()
+	box2.display()
+	box3.display()
+
   packageSprite.x= packageBody.position.x 
   packageSprite.y= packageBody.position.y 
   drawSprites();
@@ -61,11 +66,7 @@ function keyPressed() {
  if (keyCode === UP_ARROW) {
     // Look at the hints in the document and understand how to make the package body fall only on press of the Down arrow key.
 
-	packageSprite=createSprite(width/2, 80, 10,10);
-	packageSprite.addImage(packageIMG)
-	packageSprite.scale=0.2
-	Matter.body.setStatic(false)
-	packageSprite.isStatic=true;
+	Matter.Body.setStatic(packageBody, false);
   }
 
 }
